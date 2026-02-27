@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One:wght@400;700;900&family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --font: "Red Hat Text", sans-serif;
+    --red: hsl(14, 86%, 42%);
+    --green: hsl(159, 69%, 38%);
+    --rose1: hsl(20, 50%, 98%);
+    --rose2: hsl(13, 31%, 94%);
+    --rose3: hsl(14, 25%, 72%);
+    --rose4: hsl(14, 25%, 72%);
+    --rose5: hsl(7, 20%, 60%);
+    --rose6: hsl(12, 20%, 44%);
+    --rose7: hsl(14, 65%, 9%);
+}
+
+body {
+    font-family: var(--font);
+}
+
+main {
+    padding: 15px;
+    display: grid;
+    gap: 10px;
+    background-color: var(--rose2);
+}
+
+section {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+h1 {
+    font-size: 3em;
+    align-self: self-start;
+    margin-left: 5%;
+}
+
+aside {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    gap: 10px;
+
+    width: 90%;
+}
+
+picture > img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+button {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    margin-top: -30px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+
+    background-color: var(--rose1);
+    border: 1px solid rgb(81, 81, 81);
+
+    font-size: 16px;
+    cursor: pointer;
+
+    transition: all .3s;
+}
+
+button:hover {
+    background-color: var(--rose2);
+    transform: scale(1.1);
+}
+
+p.text-title {
+    color: var(--rose3);
+}
+
+aside.product p {
+    align-self: flex-start;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+p.price {
+    color: var(--red);
+}
+
+section.carts {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+section.carts > aside {
+    padding: 20px;
+    width: 90%;
+    border-radius: 15px;
+    min-height: 300px;
+    background-color: var(--rose1);
+}
+
+section.carts > aside > h2 {
+    align-self: flex-start;
+    color: var(--red);
+}
+
+section.carts > aside > img {
+    width: 60%;
+}
+
+section.carts > aside > p {
+    font-size: 18px;
+    color: var(--rose6);
+}
