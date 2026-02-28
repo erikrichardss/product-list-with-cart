@@ -23,11 +23,13 @@
 
 body {
     font-family: var(--font);
+    height: 100vh;
 }
 
 main {
     padding: 15px;
     display: grid;
+    grid-template-columns: 1fr 90vw 1fr;
     gap: 10px;
     background-color: var(--rose2);
 }
@@ -36,12 +38,23 @@ section {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
+    gap: 10px;
+
+    grid-column: 2;
+}
+
+section.product {
+    grid-row: 1;
+}
+
+section.carts {
+    grid-row: 2;
 }
 
 h1 {
     font-size: 3em;
     align-self: self-start;
-    margin-left: 5%;
+    width: 100%;
 }
 
 aside {

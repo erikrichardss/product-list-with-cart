@@ -2,6 +2,40 @@
 
 @media screen and (min-width: 770px) {
     main {
-        grid-template-columns: 1fr 400px;
+        grid-template-columns: 5% 2fr 1fr 5%;
+    }
+
+    section {
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    section.products {
+        grid-column: 2;
+    }
+
+    section.carts {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    section.carts > aside {
+        position: sticky;
+        top: 20px;
+    }
+
+    section.products > aside {
+        width: 300px;
+    }
+
+    aside {
+        padding: 10px;
+        border-radius: 10px;
+
+        transition: all .3s;
+    }
+
+    aside:hover {
+        transform: scale(0.9);
     }
 }

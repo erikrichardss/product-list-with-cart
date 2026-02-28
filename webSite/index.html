@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="style/index.css">
   <link rel="stylesheet" href="style/mediaQuerie.css">
-  <script src="script/index.js"></script>
+  <script src="script/index.js" defer></script>
   <title>Product list with cart</title>
 </head>
 
@@ -18,7 +18,7 @@
     <section class="products">
       <h1>Desserts</h1>
 
-      <aside class="product" data-id="">
+      <aside class="product" data-id="1">
         <picture>
           <source media="(max-width: 770px)" srcset="../assets/images/image-waffle-mobile.jpg">
           <img src="../assets/images/image-waffle-desktop.jpg" alt="">
@@ -33,7 +33,7 @@
         <p class="price">6.50</p>
       </aside>
 
-      <aside class="product" data-id="">
+      <aside class="product" data-id="2"> <!-- product -->
         <picture>
           <source media="(max-width: 770px)" srcset="../assets/images/image-creme-brulee-mobile.jpg" type="image/jpg">
           <img src="../assets/images/image-creme-brulee-desktop.jpg" alt="">
@@ -48,7 +48,7 @@
         <p class="price">7.00</p>
       </aside>
 
-      <aside class="product" data-id="">
+      <aside class="product" data-id="3"> <!-- product -->
         <picture>
           <source media="(max-width: 770px)" srcset="../assets/images/image-macaron-mobile.jpg" type="image/jpg">
           <img src="../assets/images/image-macaron-desktop.jpg" alt="">
@@ -63,7 +63,7 @@
         <p class="price">8.00</p>
       </aside>
 
-      <aside class="product" data-id="">
+      <aside class="product" data-id="4"> <!-- product -->
         <picture>
           <source media="(max-width: 770px)" srcset="../assets/images/image-tiramisu-mobile.jpg" type="image/jpg">
           <img src="../assets/images/image-tiramisu-desktop.jpg" alt="">
@@ -78,7 +78,7 @@
         <p class="price">5.50</p>
       </aside>
 
-      <aside class="product" data-id="">
+      <aside class="product" data-id="5"> <!-- product -->
         <picture>
           <source media="(max-width: 770px)" srcset="../assets/images/image-baklava-mobile.jpg" type="image/jpg">
           <img src="../assets/images/image-baklava-desktop.jpg" alt="">
@@ -93,13 +93,13 @@
         <p class="price">4.00</p>
       </aside>
 
-      <aside class="product" data-id="">
+      <aside class="product" data-id="6"> <!-- product -->
         <picture>
           <source media="(max-width: 770px)" srcset="../assets/images/image-meringue-mobile.jpg" type="image/jpg">
           <img src="../assets/images/image-meringue-desktop.jpg" alt="">
         </picture>
         
-        <button>
+        <button class="btn-cart">
           <img src="../assets/images/icon-add-to-cart.svg" alt="">
           Add to Cart
         </button>
@@ -108,13 +108,13 @@
         <p class="price">5.00</p>
       </aside>
 
-      <aside class="product" data-id="">
+      <aside class="product" data-id="7"> <!-- product -->
         <picture>
           <source media="(max-width: 770px)" srcset="../assets/images/image-cake-mobile.jpg" type="image/jpg">
           <img src="../assets/images/image-cake-desktop.jpg" alt="">
         </picture>
 
-        <button>
+        <button class="btn-cart">
           <img src="../assets/images/icon-add-to-cart.svg" alt="">
           Add to Cart
         </button>
@@ -123,13 +123,13 @@
         <p class="price">4.50</p>
       </aside>
 
-      <aside class="product" data-id="">
+      <aside class="product" data-id="8"> <!-- product -->
         <picture>
           <source media="(max-width: 770px)" srcset="../assets/images/image-brownie-mobile.jpg" type="image/jpg">
           <img src="../assets/images/image-brownie-desktop.jpg" alt="">
         </picture>
 
-        <button>
+        <button class="btn-cart">
           <img src="../assets/images/icon-add-to-cart.svg" alt="">
           Add to Cart
         </button>
@@ -138,13 +138,13 @@
         <p class="price">4.50</p>
       </aside>
 
-      <aside class="product" data-id="">
+      <aside class="product" data-id="9"> <!-- product -->
         <picture>
           <source media="(max-width: 770px)" srcset="../assets/images/image-panna-cotta-mobile.jpg" type="image/jpg">
           <img src="../assets/images/image-panna-cotta-desktop.jpg" alt="">
         </picture>
 
-        <button>
+        <button class="btn-cart">
           <img src="../assets/images/icon-add-to-cart.svg" alt="">
           Add to Cart
         </button>
