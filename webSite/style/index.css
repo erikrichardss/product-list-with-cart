@@ -92,7 +92,7 @@ button {
 
 button:hover {
     background-color: var(--rose2);
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 p.text-title {
@@ -136,4 +136,97 @@ section.carts > aside > img {
 section.carts > aside > p {
     font-size: 18px;
     color: var(--rose6);
+}
+
+.productInsideCart {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    border-bottom: 1px solid rgb(79, 79, 79);
+}
+
+.productInsideCart > .details {
+    display: flex;
+    flex-flow: column;
+
+    width: 100%;
+    padding: 10px;
+}
+
+.productInsideCart > .details > .detailsProduct {
+    display: flex;
+    gap: 20px;
+}
+
+.productInsideCart > .details > .detailsProduct > .quantity {
+    color: var(--red);
+    font-weight: 700;
+}
+
+.productInsideCart > .details > .detailsProduct > .price {
+    color: var(--rose5);
+}
+
+.productInsideCart > .details > .detailsProduct > .priceTotal {
+    color: var(--rose6);
+    font-weight: 500;
+}
+
+.productInsideCart > .icon > i {
+    font-size: 22px;
+    color: var(--rose6);
+    cursor: pointer;
+
+    transition: transform .3s;
+}
+
+.productInsideCart > .icon > i:hover {
+    transform: scale(1.08);
+    color: var(--red);
+}
+
+.totalProducts {
+    display: flex;
+    flex-flow: column;
+    gap: 20px;
+
+    width: 100%;
+    height: auto;
+}
+
+.totalProducts > .details {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.totalProducts > .details > p {
+    color: var(--font);
+}
+
+.totalProducts > .details > h2 {
+    font-size: 2.2em;
+    color: black;
+}
+
+.totalProducts > .confirm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 50px;
+    width: 100%;
+}
+
+.totalProducts > .confirm > button.confirmOrder {
+    height: 45px;
+    border: none;
+    background-color: var(--red);
+    color: var(--rose1);
+    width: 100%;
 }

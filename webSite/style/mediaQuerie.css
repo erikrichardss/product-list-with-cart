@@ -25,7 +25,7 @@
     }
 
     section.products > aside {
-        width: 300px;
+        width: 200px;
     }
 
     aside {
@@ -36,6 +36,6 @@
     }
 
     aside:hover {
-        transform: scale(0.9);
+        transform: scale(0.98);
     }
 }
