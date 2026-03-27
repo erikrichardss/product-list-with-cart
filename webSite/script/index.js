@@ -80,15 +80,18 @@ function renderProducts() {
 
     products.forEach((product) => {
 
-        sectionProducts.innerHTML += `<aside class="product" data-id="${product.id}">
+        sectionProducts.innerHTML += `
+        <aside class="product" data-id="${product.id}">
             <picture>
                 <source media="(max-width: 770px)" srcset="${product.imgMobile}">
                 <img src="${product.imgDesktop}" alt="">
             </picture>
+
             <button class="btn-cart">
-            <img src="../assets/images/icon-add-to-cart.svg" alt="">
-            Add to cart
+                <img src="../assets/images/icon-add-to-cart.svg" alt="">
+                Add to cart
             </button>
+
             <p class="text-title">${product.textTitle}</p>
             <p>${product.text}</p>
             <p class="price">${product.price.toFixed(2)}</p>
@@ -99,54 +102,97 @@ function renderProducts() {
 function addToCart() {
 
     const btnAddCart = document.querySelectorAll(".btn-cart");
-    
-    btnAddCart.forEach((button) => {   
-        
+    let quantity = 0;
+    let total = 0;
+
+    btnAddCart.forEach((button) => {
+
         button.addEventListener("click", (event) => {
-            
-            const sectionCart = document.querySelector(".carts");
-            const cartEmpty = document.querySelector(".cartEmpty");
+
+            quantity++
+
+            const cartItems = document.querySelector(".cartItems");
             const productElement = event.target.closest(".product");
             const textProduct = productElement.querySelector(".text-title").textContent;
-            const priceProduct = productElement.querySelector(".price").textContent;
+            const priceProduct = parseFloat(productElement.querySelector(".price").textContent);
+            const sizeCart = document.querySelector(".sizeCart");
 
-            if (cartEmpty) {
+            sizeCart.textContent = quantity;
+
+            if (quantity > 0) {
+                const cartEmpty = document.querySelector(".cartEmpty");
+                const containerTotal = document.querySelector(".containerTotal");
+                const totalPrice = document.querySelector(".totalPrice");
+
+                total += priceProduct;
+
                 cartEmpty.style.display = "none";
+                containerTotal.style.display = "block";
+
+                totalPrice.textContent = "$"+total.toFixed(2);
             }
 
-            sectionCart.innerHTML += `
+            cartItems.innerHTML += `
                 <div class="productInsideCart">
                   <div class="details">
                     <p>${textProduct}</p>
                 
                     <div class="detailsProduct">
                       <p class="quantity">1</p>
-                      <p class="price">${priceProduct}</p>
-                      <p class="priceTotal">2</p>
+                      <p class="price">${priceProduct.toFixed(2)}</p>
+                      <p class="priceTotal">${priceProduct*quantity}</p>
                     </div>
                   </div>
                 
                   <div class="icon">
-                    <i class="fa-regular fa-circle-xmark"></i>
+                    <i class="fa-regular fa-circle-xmark removeProductCart"></i>
                   </div>
-                </div>
-            </aside>`;
-            console.log(event.target.parentNode.children.classList);
+                </div>`;
+            // console.log(event.target.parentNode.children.classList);
         });
     });
 }
 
-function cart() {
+function removeProduct() {
 
-    const sectionCarts = document.querySelector(".carts");
+    const cartItems = document.querySelector(".cartItems");
+    
+    cartItems.addEventListener("click", (event) => {
+        
+        if (event.target.classList.contains("removeProductCart")) {
+            
+            const product = event.target.closest(".productInsideCart");
+            
+            const priceProduct = parseFloat(document.querySelector(".price").textContent);
 
-    sectionCarts.innerHTML = `<aside class="cart cartEmpty">
-        <h2>Your Cart <span class="sizeCart">0</span></h2>
-        <img src="../assets/images/illustration-empty-cart.svg" alt="" class="imgcart">
-        <p class="text-cart">Your added items will appear here</p>
-    </aside>`
+            const sizeCart = document.querySelector(".sizeCart");
+            const totalPrice = document.querySelector(".totalPrice");
+            
+            let quantity = parseInt(sizeCart.textContent);
+            let total = parseFloat(totalPrice.textContent);
+
+            total -= priceProduct;
+            quantity--;
+
+            if (quantity < 0) quantity = 0;
+            if (total < 0) total = 0;
+
+            sizeCart.textContent = quantity;
+            totalPrice.textContent = `$${total.toFixed(2)}`;
+
+            product.remove();
+
+            if (quantity === 0) {
+                const cartEmpty = document.querySelector(".cartEmpty");
+                const containerTotal = document.querySelector(".containerTotal");
+
+                cartEmpty.style.display = "block";
+                containerTotal.style.display = "none";
+            }
+        }
+    });
 }
 
 renderProducts();
 addToCart();
-cart();
+removeProduct();
