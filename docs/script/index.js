@@ -3,72 +3,72 @@ const products = [
         id: 1,
         textTitle: "Waffle",
         text: "Waffle with Berries",
-        imgMobile: "../assets/images/image-waffle-mobile.jpg",
-        imgDesktop: "../assets/images/image-waffle-desktop.jpg",
+        imgMobile: "assets/images/image-waffle-mobile.jpg",
+        imgDesktop: "assets/images/image-waffle-desktop.jpg",
         price: 6.50
     },
     {
         id: 2,
         textTitle: "Crème Brûlée",
         text: "Vanilla Bean Crème Brûlée",
-        imgMobile: "../assets/images/image-creme-brulee-mobile.jpg",
-        imgDesktop: "../assets/images/image-creme-brulee-desktop.jpg",
+        imgMobile: "assets/images/image-creme-brulee-mobile.jpg",
+        imgDesktop: "assets/images/image-creme-brulee-desktop.jpg",
         price: 7.00
     },
     {
         id: 3,
         textTitle: "Macaron",
         text: "Macaron Mix of Five",
-        imgMobile: "../assets/images/image-macaron-mobile.jpg",
-        imgDesktop: "../assets/images/image-macaron-desktop.jpg",
+        imgMobile: "assets/images/image-macaron-mobile.jpg",
+        imgDesktop: "assets/images/image-macaron-desktop.jpg",
         price: 8.00
     },
     {
         id: 4,
         textTitle: "Classic Tiramisu",
         text: "Classic Tiramisu",
-        imgMobile: "../assets/images/image-tiramisu-mobile.jpg",
-        imgDesktop: "../assets/images/image-tiramisu-desktop.jpg",
+        imgMobile: "assets/images/image-tiramisu-mobile.jpg",
+        imgDesktop: "assets/images/image-tiramisu-desktop.jpg",
         price: 5.50
     },
     {
         id: 5,
         textTitle: "Baklava",
         text: "Pistachio Baklava",
-        imgMobile: "../assets/images/image-baklava-mobile.jpg",
-        imgDesktop: "../assets/images/image-baklava-desktop.jpg",
+        imgMobile: "assets/images/image-baklava-mobile.jpg",
+        imgDesktop: "assets/images/image-baklava-desktop.jpg",
         price: 4.00
     },
     {
         id: 6,
         textTitle: "Pie",
         text: "Lemon Meringue Pie",
-        imgMobile: "../assets/images/image-meringue-mobile.jpg",
-        imgDesktop: "../assets/images/image-meringue-desktop.jpg",
+        imgMobile: "assets/images/image-meringue-mobile.jpg",
+        imgDesktop: "assets/images/image-meringue-desktop.jpg",
         price: 5.00
     },
     {
         id: 7,
         textTitle: "Cake",
         text: "Red Velvet Cake",
-        imgMobile: "../assets/images/image-cake-mobile.jpg",
-        imgDesktop: "../assets/images/image-cake-desktop.jpg",
+        imgMobile: "assets/images/image-cake-mobile.jpg",
+        imgDesktop: "assets/images/image-cake-desktop.jpg",
         price: 4.50
     },
     {
         id: 8,
         textTitle: "Brownie",
         text: "WSalted Caramel Browniee",
-        imgMobile: "../assets/images/image-brownie-mobile.jpg",
-        imgDesktop: "../assets/images/image-brownie-desktop.jpg",
+        imgMobile: "assets/images/image-brownie-mobile.jpg",
+        imgDesktop: "assets/images/image-brownie-desktop.jpg",
         price: 4.50
     },
     {
         id: 9,
         textTitle: "Panna Cotta",
         text: "Vanilla Panna Cotta",
-        imgMobile: "../assets/images/image-panna-cotta-mobile.jpg",
-        imgDesktop: "../assets/images/image-panna-cotta-desktop.jpg",
+        imgMobile: "assets/images/image-panna-cotta-mobile.jpg",
+        imgDesktop: "assets/images/image-panna-cotta-desktop.jpg",
         price: 6.50
     },
 
